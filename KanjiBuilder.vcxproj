@@ -20,13 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Core\Application.cpp" />
+    <ClCompile Include="Source\Core\Component.cpp" />
     <ClCompile Include="Source\Core\GameConfig.cpp" />
+    <ClCompile Include="Source\Core\GameObject.cpp" />
     <ClCompile Include="Source\Core\Looper.cpp" />
     <ClCompile Include="Source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Application.h" />
+    <ClInclude Include="Source\Core\Component.h" />
     <ClInclude Include="Source\Core\GameConfig.h" />
+    <ClInclude Include="Source\Core\GameObject.h" />
     <ClInclude Include="Source\Core\Looper.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
