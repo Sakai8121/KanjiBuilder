@@ -9,4 +9,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		application.Run();
 	}
 	application.Finalize();
+
+	return 0;
 }

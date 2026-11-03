@@ -1,6 +1,6 @@
 ﻿#include "Core/Application.h"
 #include <Dxlib.h>
-#include "Core/Looper.h"
+#include "Core/GameEngine.h"
 #include "Core/GameConfig.h"
 
 bool Application::Initialize()
@@ -37,14 +37,10 @@ bool Application::Initialize()
 
 void Application::Run()
 {
-	Looper looper;
-	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
-		ClearDrawScreen();   // 画面リセット
-
-		looper.Update();     // ゲームのロジック更新と描画命令
-
-		ScreenFlip();        // 画面反映
-	}
+	// engineをRun()の中で定義することで、Run()を抜けるときに自動的にリソースが解放される。
+	// その後、Finalize()でDxLib_End()を呼ぶという流れにすることで、DxLib_End()の前にGameEngineのリソースが安全に解放されるようにする。
+	GameEngine engine;
+	engine.Loop();
 }
 
 void Application::Finalize()
