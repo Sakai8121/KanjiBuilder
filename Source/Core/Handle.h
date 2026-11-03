@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <limits>
 
 // GameObjectやComponentの参照を安全に扱うためのハンドル
 class Handle final
