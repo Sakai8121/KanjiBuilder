@@ -39,7 +39,11 @@ void Application::Run()
 {
 	Looper looper;
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
-		looper.Update();
+		ClearDrawScreen();   // 画面リセット
+
+		looper.Update();     // ゲームのロジック更新と描画命令
+
+		ScreenFlip();        // 画面反映
 	}
 }
 
