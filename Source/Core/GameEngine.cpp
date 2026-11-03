@@ -1,6 +1,15 @@
 ﻿#include "Core/GameEngine.h"
+#include "Game/TestDrawComponent.h"
 #include <Dxlib.h>
 #include <algorithm>
+
+GameEngine::GameEngine()
+{
+	// テスト用　あとで消す
+	auto gameObject = std::make_unique<GameObject>();
+	gameObject->AddComponent<TestDrawComponent>();
+	_gameObjects.push_back(std::move(gameObject));
+}
 
 void GameEngine::Loop()
 {
@@ -15,7 +24,10 @@ void GameEngine::Loop()
         ClearDrawScreen();
 
         // --- ゲーム更新・描画処理 ---
-        
+		for (auto& gameObject : _gameObjects) {
+			gameObject->Update(frameDt);
+			gameObject->Draw();
+		}
 
         ScreenFlip();
     }
