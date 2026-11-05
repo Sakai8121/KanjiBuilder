@@ -27,6 +27,8 @@
     <ClCompile Include="Source\Core\GameObject.cpp" />
     <ClCompile Include="Source\Core\GameEngine.cpp" />
     <ClCompile Include="Source\Core\Handle.cpp" />
+    <ClCompile Include="Source\Core\Scene.cpp" />
+    <ClCompile Include="Source\Core\SceneManager.cpp" />
     <ClCompile Include="Source\Core\SlotMap.cpp" />
     <ClCompile Include="Source\Core\Subscription.cpp" />
     <ClCompile Include="Source\Game\TestDrawComponent.cpp" />
@@ -41,6 +43,8 @@
     <ClInclude Include="Source\Core\GameObject.h" />
     <ClInclude Include="Source\Core\GameEngine.h" />
     <ClInclude Include="Source\Core\Handle.h" />
+    <ClInclude Include="Source\Core\Scene.h" />
+    <ClInclude Include="Source\Core\SceneManager.h" />
     <ClInclude Include="Source\Core\SlotMap.h" />
     <ClInclude Include="Source\Game\TestDrawComponent.h" />
     <ClInclude Include="Subscription.h" />

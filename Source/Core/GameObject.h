@@ -7,12 +7,14 @@
 #include <memory>
 #include <utility>
 
-class GameObject
+// コンポーネントを入れるだけの入れ物。継承しない
+class GameObject final
 {
 public:
 	GameObject(Handle handle) : _handle(handle){}
-	virtual ~GameObject() = default;
+	~GameObject() = default;
 
+	void Start();
 	void Update(float deltaTime);
 	// 描画機能を持たないコンポーネントの空の実装を呼んでいたり、描画順を制御できない。
 	// Todo: 描画機能を持つComponentが自分の画像と座標をグローバルなRenderManagerのようなものに送り、
