@@ -12,6 +12,12 @@ public:
 	virtual void Update(float deltaTime) {};
 	virtual void Draw() {};
 
+	void SetActive(bool isActive);
+	bool IsActive() const;
+
 protected:
 	GameObject* gameObject = nullptr;
+
+private:
+	bool _isActive = true;
 };

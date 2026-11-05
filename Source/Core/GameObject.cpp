@@ -2,18 +2,34 @@
 
 void GameObject::Update(float deltaTime)
 {
-	if (!isActive) return;
-	for (auto& comp : components)
+	if (!_isActive) return;
+	for (auto& comp : _components)
 	{
-		comp->Update(deltaTime);
+		if (comp->IsActive())
+		{
+			comp->Update(deltaTime);
+		}
 	}
 }
 
 void GameObject::Draw()
 {
-	if (!isActive) return;
-	for (auto& comp : components)
+	if (!_isActive) return;
+	for (auto& comp : _components)
 	{
-		comp->Draw();
+		if (comp->IsActive())
+		{
+			comp->Draw();
+		}
 	}
+}
+
+void GameObject::SetActive(bool isActive)
+{
+	_isActive = isActive;
+}
+
+Handle GameObject::GetHandle() const
+{
+	return _handle;
 }
