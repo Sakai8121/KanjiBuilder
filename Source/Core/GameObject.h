@@ -19,10 +19,11 @@ public:
 	// まとめて描画フェーズで描画する形にする。
 	// ※Update内で他のコンポーネントと合わせて描画すると、実行順序によって結果が変わるのでやらないように注意
 	void Draw();
-
 	Handle GetHandle() const;
-
 	void SetActive(bool isActive);
+	void Destory();
+	bool IsDestroyed();
+	virtual void OnDestroy() {};
 
 	// コンポーネントを追加し、参照用の生ポインタを返す
 	template <typename T, typename... Args>
@@ -59,5 +60,7 @@ public:
 private:
 	std::vector<std::unique_ptr<Component>> _components;
 	bool _isActive = true;
+	// 遅延破棄用
+	bool _isDestroyed = false;
 	Handle _handle;
 };

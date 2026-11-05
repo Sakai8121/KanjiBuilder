@@ -9,3 +9,8 @@ bool Component::IsActive() const
 {
 	return _isActive;
 }
+
+void Component::Destroy()
+{
+	OnDestory();
+}

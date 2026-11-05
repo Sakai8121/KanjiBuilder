@@ -33,3 +33,20 @@ Handle GameObject::GetHandle() const
 {
 	return _handle;
 }
+
+void GameObject::Destory()
+{
+	OnDestroy();
+
+	for (auto& comp : _components)
+	{
+		comp->Destroy();
+	}
+
+	_isDestroyed = true;
+}
+
+bool GameObject::IsDestroyed()
+{
+	return _isDestroyed;
+}

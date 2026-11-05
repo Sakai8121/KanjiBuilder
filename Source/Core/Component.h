@@ -11,9 +11,11 @@ public:
 	virtual void Start() {};
 	virtual void Update(float deltaTime) {};
 	virtual void Draw() {};
+	virtual void OnDestory() {};
 
 	void SetActive(bool isActive);
 	bool IsActive() const;
+	void Destroy();
 
 protected:
 	GameObject* gameObject = nullptr;

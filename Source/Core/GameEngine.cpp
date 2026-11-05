@@ -6,7 +6,7 @@
 GameEngine::GameEngine()
 {
 	// テスト用　あとで消す
-	auto gameObject = std::make_unique<GameObject>();
+	auto gameObject = std::make_unique<GameObject>(Handle());
 	gameObject->AddComponent<TestDrawComponent>();
 	_gameObjects.push_back(std::move(gameObject));
 }
