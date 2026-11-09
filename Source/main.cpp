@@ -1,5 +1,6 @@
 ﻿#include "DxLib.h"
 #include "Core/Application.h"
+#include "Core/Logger.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {

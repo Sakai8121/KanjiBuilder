@@ -48,17 +48,18 @@ Handle GameObject::GetHandle() const
 
 void GameObject::Destory()
 {
-	OnDestroy();
-
-	for (auto& comp : _components)
-	{
-		comp->Destroy();
-	}
-
 	_isDestroyed = true;
 }
 
 bool GameObject::IsDestroyed()
 {
 	return _isDestroyed;
+}
+
+void GameObject::OnDestroy()
+{
+	for (auto& comp : _components)
+	{
+		comp->OnDestory();
+	}
 }

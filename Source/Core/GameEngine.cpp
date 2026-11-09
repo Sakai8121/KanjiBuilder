@@ -1,14 +1,13 @@
 ﻿#include "Core/GameEngine.h"
 #include "Game/TestDrawComponent.h"
+#include "Core/EventBus.h"
 #include <Dxlib.h>
 #include <algorithm>
+#include "Core/Logger.h"
 
 GameEngine::GameEngine()
 {
-	// テスト用　あとで消す
-	auto gameObject = std::make_unique<GameObject>(Handle());
-	gameObject->AddComponent<TestDrawComponent>();
-	_gameObjects.push_back(std::move(gameObject));
+    SceneManager::GetInstance().Init();
 }
 
 void GameEngine::Loop()
@@ -24,10 +23,10 @@ void GameEngine::Loop()
         ClearDrawScreen();
 
         // --- ゲーム更新・描画処理 ---
-		for (auto& gameObject : _gameObjects) {
-			gameObject->Update(frameDt);
-			gameObject->Draw();
-		}
+        SceneManager::GetInstance().Update(frameDt);
+        EventBus::GetInstance().Flush(); // シーンの更新が終わってから
+        SceneManager::GetInstance().ProcessGC(); // Update内でGameObjectの破棄は行わない。ProcessGCで遅延破棄する
+        SceneManager::GetInstance().Draw(); // 新しい状態での描画
 
         ScreenFlip();
     }

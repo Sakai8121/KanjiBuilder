@@ -25,6 +25,12 @@
     <Filter Include="ソース ファイル\Game">
       <UniqueIdentifier>{b94a71c4-0aef-4a96-883e-e9b792f59004}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Game\Scene">
+      <UniqueIdentifier>{f6edb916-19d0-4840-882c-e48c711f344d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Game\Scene">
+      <UniqueIdentifier>{5a630981-a1e3-474e-91cb-47cc92cb69c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Core\Subscription.cpp">
@@ -67,7 +73,13 @@
       <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\SceneManager.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Scene\GameScene.cpp">
+      <Filter>ソース ファイル\Game\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Logger.cpp">
+      <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +120,13 @@
       <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\SceneManager.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Scene\GameScene.h">
+      <Filter>ヘッダー ファイル\Game\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Logger.h">
+      <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

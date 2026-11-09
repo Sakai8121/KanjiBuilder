@@ -2,17 +2,19 @@
 #include <vector>  
 #include <memory>  
 #include <Dxlib.h>
-
-class GameObject;  
+#include "Core/SlotMap.h"
+#include "Core/GameObject.h"
 
 class Scene  
 {  
 public:  
 	void Start();  
-	void Update(LONGLONG frameDt);
+	void Update(float frameDt);
 	void Draw();
+	void ProcessGC();
 
 protected:
 	virtual void OnStart() {};
 	std::vector<std::unique_ptr<GameObject>> _sceneGameObjects;
+	SlotMap _slotMap;
 };

@@ -23,9 +23,11 @@ public:
 	void Draw();
 	Handle GetHandle() const;
 	void SetActive(bool isActive);
+	// Update中に呼ばれるDestroyでフラグを立てるだけ
 	void Destory();
 	bool IsDestroyed();
-	virtual void OnDestroy() {};
+	// 遅延破棄の処理
+	void OnDestroy();
 
 	// コンポーネントを追加し、参照用の生ポインタを返す
 	template <typename T, typename... Args>
