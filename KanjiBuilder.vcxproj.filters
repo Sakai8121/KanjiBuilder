@@ -81,6 +81,9 @@
     <ClCompile Include="Source\Core\Logger.cpp">
       <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\Time.cpp">
+      <Filter>ソース ファイル\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Application.h">
@@ -126,6 +129,9 @@
       <Filter>ヘッダー ファイル\Game\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\Logger.h">
+      <Filter>ヘッダー ファイル\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Time.h">
       <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
   </ItemGroup>
