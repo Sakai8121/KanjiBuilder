@@ -84,6 +84,9 @@
     <ClCompile Include="Source\Core\Time.cpp">
       <Filter>ソース ファイル\Core</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\InputManager.cpp">
+      <Filter>ソース ファイル\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Application.h">
@@ -132,6 +135,12 @@
       <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\Time.h">
+      <Filter>ヘッダー ファイル\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Vector2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\InputManager.h">
       <Filter>ヘッダー ファイル\Core</Filter>
     </ClInclude>
   </ItemGroup>
