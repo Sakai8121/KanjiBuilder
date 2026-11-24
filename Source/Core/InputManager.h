@@ -65,9 +65,9 @@ public:
 	bool GetMouseButtonUp(MouseButton button) const;
 
 	// 現在のカーソルの座標(左上を0,0としたピクセル単位のスクリーン座標)
-	Vector2 GetMousePosition();
+	Vector2 GetMousePosition() const { return _currentMousePosition; }
 	// 前フレームからの移動量
-	Vector2 GetMouseDelta();
+	Vector2 GetMouseDelta() const { return _currentMousePosition - _prevMousePosition; }
 private:
 	InputManager() = default;
 	~InputManager() = default;
