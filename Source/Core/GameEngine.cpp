@@ -13,8 +13,6 @@ GameEngine::GameEngine()
 
 void GameEngine::Loop()
 {
-    LONGLONG prev = GetNowHiPerformanceCount();
-
     while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
 		Time::GetInstance().Update();
 
