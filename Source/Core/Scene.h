@@ -24,6 +24,6 @@ protected:
 	virtual void OnStart() {};
 
 private:
-	GameObjectManager _objectManager;
 	RenderSystem _renderSystem;
+	GameObjectManager _objectManager;
 };

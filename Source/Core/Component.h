@@ -8,7 +8,13 @@ class Component
 	friend class GameObject;
 
 public:
+	Component() = default;
 	virtual ~Component() = default;
+	Component(const Component&) = delete;
+	Component& operator=(const Component&) = delete;
+	Component(Component&&) = delete;
+	Component& operator=(Component&&) = delete;
+
 	virtual void Start() {};
 	virtual void Update(float deltaTime) {};
 	virtual void OnDestroy() {};
