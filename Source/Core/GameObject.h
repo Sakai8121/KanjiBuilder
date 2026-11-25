@@ -2,16 +2,20 @@
 
 #include "Core/Component.h"
 #include "Core/Handle.h"
-
+#include "Core/TransformComponent.h"
 #include <vector>
 #include <memory>
 #include <utility>
+
 
 // コンポーネントを入れるだけの入れ物。継承しない
 class GameObject final
 {
 public:
-	GameObject(Handle handle) : _handle(handle){}
+	GameObject(Handle handle) : _handle(handle)
+	{
+		_transform = AddComponent<TransformComponent>();
+	}
 	~GameObject() = default;
 
 	void Start();
@@ -28,6 +32,9 @@ public:
 	bool IsDestroyed();
 	// 遅延破棄の処理
 	void OnDestroy();
+
+	// TransformComponentは専用アクセサを用意しておく
+	TransformComponent* GetTransform() const { return _transform; }
 
 	// コンポーネントを追加し、参照用の生ポインタを返す
 	template <typename T, typename... Args>
@@ -63,7 +70,10 @@ public:
 
 private:
 	std::vector<std::unique_ptr<Component>> _components;
+	TransformComponent* _transform = nullptr;
+
 	bool _isActive = true;
+	
 	// 遅延破棄用
 	bool _isDestroyed = false;
 	Handle _handle;
