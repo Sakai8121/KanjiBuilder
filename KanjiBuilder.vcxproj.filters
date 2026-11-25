@@ -37,6 +37,12 @@
     <Filter Include="ヘッダー ファイル\Core\Interface">
       <UniqueIdentifier>{134ae55b-b34c-4c14-9d4e-dd20ae549056}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Core\Renderer">
+      <UniqueIdentifier>{e3e972dd-5af5-4fc7-a883-c48351b473ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Core\Renderer">
+      <UniqueIdentifier>{c189b6e0-8e52-4bf3-bc06-4d9eeb7e1c70}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Core\Subscription.cpp">
@@ -111,6 +117,9 @@
     <ClCompile Include="Source\Core\Interface\IRenderable.cpp">
       <Filter>ソース ファイル\Core\Interface</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\Renderer\ShapeRendererComponent.cpp">
+      <Filter>ソース ファイル\Core\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Application.h">
@@ -184,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="Source\Core\Interface\IRenderable.h">
       <Filter>ヘッダー ファイル\Core\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Renderer\ShapeRendererComponent.h">
+      <Filter>ヘッダー ファイル\Core\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -33,6 +33,7 @@
     <ClCompile Include="Source\Core\Logger.cpp" />
     <ClCompile Include="Source\Core\Math.cpp" />
     <ClCompile Include="Source\Core\RendererComponent.cpp" />
+    <ClCompile Include="Source\Core\Renderer\ShapeRendererComponent.cpp" />
     <ClCompile Include="Source\Core\RenderSystem.cpp" />
     <ClCompile Include="Source\Core\Scene.cpp" />
     <ClCompile Include="Source\Core\SceneManager.cpp" />
@@ -59,6 +60,7 @@
     <ClInclude Include="Source\Core\Logger.h" />
     <ClInclude Include="Source\Core\Math.h" />
     <ClInclude Include="Source\Core\RendererComponent.h" />
+    <ClInclude Include="Source\Core\Renderer\ShapeRendererComponent.h" />
     <ClInclude Include="Source\Core\RenderSystem.h" />
     <ClInclude Include="Source\Core\Scene.h" />
     <ClInclude Include="Source\Core\SceneManager.h" />
