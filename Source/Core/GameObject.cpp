@@ -24,42 +24,10 @@ void GameObject::Update(float deltaTime)
 	}
 }
 
-void GameObject::Draw()
-{
-	if (!_isActive) return;
-	for (auto& comp : _components)
-	{
-		if (comp->IsActive())
-		{
-			comp->Draw();
-		}
-	}
-}
-
-void GameObject::SetActive(bool isActive)
-{
-	_isActive = isActive;
-}
-
-Handle GameObject::GetHandle() const
-{
-	return _handle;
-}
-
-void GameObject::Destory()
-{
-	_isDestroyed = true;
-}
-
-bool GameObject::IsDestroyed()
-{
-	return _isDestroyed;
-}
-
 void GameObject::OnDestroy()
 {
 	for (auto& comp : _components)
 	{
-		comp->OnDestory();
+		comp->OnDestroy();
 	}
 }

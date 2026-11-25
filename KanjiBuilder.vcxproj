@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Core\Application.cpp" />
+    <ClCompile Include="Source\Core\Color.cpp" />
     <ClCompile Include="Source\Core\Component.cpp" />
     <ClCompile Include="Source\Core\Event.cpp" />
     <ClCompile Include="Source\Core\EventBus.cpp" />
@@ -30,9 +31,11 @@
     <ClCompile Include="Source\Core\InputManager.cpp" />
     <ClCompile Include="Source\Core\Logger.cpp" />
     <ClCompile Include="Source\Core\Math.cpp" />
+    <ClCompile Include="Source\Core\RendererComponent.cpp" />
+    <ClCompile Include="Source\Core\RenderSystem.cpp" />
     <ClCompile Include="Source\Core\Scene.cpp" />
     <ClCompile Include="Source\Core\SceneManager.cpp" />
-    <ClCompile Include="Source\Core\SlotMap.cpp" />
+    <ClCompile Include="Source\Core\GameObjectManager.cpp" />
     <ClCompile Include="Source\Core\Subscription.cpp" />
     <ClCompile Include="Source\Core\Time.cpp" />
     <ClCompile Include="Source\Core\TransformComponent.cpp" />
@@ -42,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Application.h" />
+    <ClInclude Include="Source\Core\Color.h" />
     <ClInclude Include="Source\Core\Component.h" />
     <ClInclude Include="Source\Core\Event.h" />
     <ClInclude Include="Source\Core\EventBus.h" />
@@ -52,9 +56,11 @@
     <ClInclude Include="Source\Core\InputManager.h" />
     <ClInclude Include="Source\Core\Logger.h" />
     <ClInclude Include="Source\Core\Math.h" />
+    <ClInclude Include="Source\Core\RendererComponent.h" />
+    <ClInclude Include="Source\Core\RenderSystem.h" />
     <ClInclude Include="Source\Core\Scene.h" />
     <ClInclude Include="Source\Core\SceneManager.h" />
-    <ClInclude Include="Source\Core\SlotMap.h" />
+    <ClInclude Include="Source\Core\GameObjectManager.h" />
     <ClInclude Include="Source\Core\Time.h" />
     <ClInclude Include="Source\Core\TransformComponent.h" />
     <ClInclude Include="Source\Core\Vector2.h" />

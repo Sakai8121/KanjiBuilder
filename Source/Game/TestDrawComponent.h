@@ -6,7 +6,6 @@ class TestDrawComponent final : public Component
 {
 public:
 	void Update(float deltaTime) override;
-	void Draw() override;
 
 private :
 	float _x = 100.0f;

@@ -1,4 +1,5 @@
 ﻿#include "Core/Component.h"
+#include "Core/GameObject.h"
 
 void Component::SetActive(bool isActive)
 {
@@ -12,5 +13,10 @@ bool Component::IsActive() const
 
 void Component::Destroy()
 {
-	OnDestory();
+	OnDestroy();
+}
+
+Scene* Component::GetScene() const
+{
+	return _gameObject->GetScene();
 }
